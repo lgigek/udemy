@@ -1,15 +1,18 @@
 from flask import Flask
 from flask_restful import Api
-import math_operations
+
+from math_operations import basic
+from visit import visit
 
 app = Flask(__name__)
 api = Api(app)
 
 
-api.add_resource(math_operations.Add, '/add')
-api.add_resource(math_operations.Subtract, '/subtract')
-api.add_resource(math_operations.Multiply, '/multiply')
-api.add_resource(math_operations.Divide, '/divide')
+api.add_resource(basic.Add, '/add')
+api.add_resource(basic.Subtract, '/subtract')
+api.add_resource(basic.Multiply, '/multiply')
+api.add_resource(basic.Divide, '/divide')
+api.add_resource(visit.Visit, '/visit')
 
 
 @app.route('/')
