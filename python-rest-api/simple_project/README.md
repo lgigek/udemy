@@ -1,4 +1,4 @@
-#Section 2, 3 and 4
+# Section 2, 3 and 4
 
 This application is build by Docker compose and contain some basic endpoints.
 
